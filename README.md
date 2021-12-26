@@ -1,2 +1,4 @@
 # CLI-Python3-Tic-Tac-Toe
-A classical game in Python
+A classical Tic Tac Toe game in Python.
+Requirements:
+- Python 3.x
