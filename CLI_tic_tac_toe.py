@@ -1,7 +1,7 @@
 '''
 While True:
 - Display a CLI 3x3 board
-- Pick x or o randomly to start
+- Pick x or o randomly to start with
 - Options for p1 or p2:
 - Check draw (whether the board is fully filled)
 - Check win (whether one of the player has won):
@@ -32,7 +32,7 @@ class TicTacToe:
                 else:
                     print(self.board[row][col], end="")
                 
-    # Choose a rorom player (x or o) to start
+    # Choose a ranom player (x or o) to start
     def choose_player(self):
         player_start_first = r.randint(1,2)
         if player_start_first == 1:
@@ -45,7 +45,7 @@ class TicTacToe:
             print('o starts first')
 
 
-    # Implements the options of p1 or p2
+    # Implements the main part of the game
     def go(self, player):
         player_row = int(input(f"Player {player} chooses row: "))
         player_col = int(input(f"Player {player} chooses col: "))
@@ -90,7 +90,8 @@ class TicTacToe:
                     return True
 
 
-                
+    # Check only the 2 diagonals (it's a 3x3 matrix)
+    # Idk how to improve this
     def check_diagonal(self, player):
         check_list = [self.board[0][0], 
                     self.board[1][1],
