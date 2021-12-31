@@ -15,9 +15,9 @@ import random as r
 class TicTacToe:
     def __init__(self):
         self.board = \
-            [['x', '-', '-'], 
-             ['x', '-', '-'], 
-             ['x', '-', '-']]
+            [['-', '-', '-'], 
+             ['-', '-', '-'], 
+             ['-', '-', '-']]
 
         self.p1_sign = None
         self.p2_sign = None
@@ -32,7 +32,7 @@ class TicTacToe:
                 else:
                     print(self.board[row][col], end="")
                 
-    # Choose a ranom player (x or o) to start
+    # Choose a random player (x or o) to start
     def choose_player(self):
         player_start_first = r.randint(1,2)
         if player_start_first == 1:
@@ -91,7 +91,7 @@ class TicTacToe:
 
 
     # Check only the 2 diagonals (it's a 3x3 matrix)
-    # Idk how to improve this
+    # Idk how to implement this
     def check_diagonal(self, player):
         check_list = [self.board[0][0], 
                     self.board[1][1],
@@ -138,4 +138,4 @@ if __name__ == "__main__":
         answer = input("Do you want to play again (y/n): ")
         if answer == 'n':
             break
-        
+     
